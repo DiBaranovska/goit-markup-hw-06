@@ -496,28 +496,30 @@ footer {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-
 }
 
-.subscription-btn {
+.form-btn {
   font-weight: 700;
   font-size: 16px;
-  line-height: 1,88;
+  line-height: 1.88;
   letter-spacing: 0.06em;
   color: var(--white-text-color);
   padding: 10px 28px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
   width: 200px;
-  height: 50px;
+  justify-content: space-between;
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0;
   border-radius: 4px;
   border-color: transparent;
   cursor: pointer;
 }
 
+.subscription-btn {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
 
 /*portfolio--------------------------------------------*/
 
@@ -686,7 +688,15 @@ footer {
   cursor: pointer;
 }
 
-/*is-hidden*/
+.modal-icon-close {
+  fill: var(--dark-logo-color);
+  transition: fill var(--animation);
+}
+
+.modal-icon-close:hover,
+.modal-icon-close:focus {
+  fill: var(--accent-color);
+}
 
 .modal-title {
   font-weight: 700;
@@ -694,6 +704,119 @@ footer {
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-
+  margin-bottom: 12px;
   color: var(--dark-text-color);
+}
+
+.modal-label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+.modal-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-fild {
+  height: 40px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 42px;
+  padding-right: 42px;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  transition: outline-color var(--animation);
+}
+
+.modal-fild:focus {
+  outline-color: var(--accent-color);
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  transition: fill var(--animation);
+}
+
+.modal-icon {
+  fill: var(--dark-text-color);
+}
+
+.modal-fild:focus + .modal-icon {
+  fill: var(--accent-color);
+}
+
+.modal-area {
+  display: block;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline-offset: -1px;
+  outline: 1px solid transparent;
+  transition: outline-color var(--animation);
+  margin-bottom: 20px;
+}
+
+.modal-area:focus {
+  outline-color: var(--accent-color);
+}
+
+.modal-area::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.form-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+
+.modal-checkbox {
+  appearance: none;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--dark-text-color);
+  border-radius: 2px;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color var(--animation), outline-color var(--animation);
+}
+
+.modal-checkbox:checked {
+  outline-color: var(--accent-color);
+  background-color: var(--accent-color);
+  background-image: url("data:image/svg+xml,%3Csvg width='13' height='10' viewBox='0 0 13 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.95703 4.75166L1.88825 4.68604L1.81923 4.75141L0.93123 5.59258L0.854858 5.66492L0.930974 5.73753L4.42671 9.07236L4.49574 9.1382L4.56476 9.07236L12.069 1.91352L12.1449 1.84116L12.069 1.76881L11.1873 0.927644L11.1183 0.861826L11.0493 0.927611L4.49577 7.17353L1.95703 4.75166Z' fill='white' stroke='white' stroke-width='0.2'/%3E%3C/svg%3E ");
+}
+
+.form-agreement-link {
+  color: var(--accent-color);
+  text-underline-position: under;
+}
+
+.feedback-btn {
+  display: block;
+  margin: auto;
+  transition: background-color var(--animation);
+}
+
+.feedback-btn:hover,
+.feedback-btn:focus {
+  background-color: var(--btn-active);
 }
